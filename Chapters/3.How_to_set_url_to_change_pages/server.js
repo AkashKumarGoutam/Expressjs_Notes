@@ -8,12 +8,12 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 app.get('/' , (req , res) =>{
-    res.sendFile(path.join(__dirname) + '/home.html')
+    res.sendFile(path.resolve(__dirname) + '/home.html')
 })
 
 
 app.get('/about' , (req , res) =>{
-    res.sendFile(path.join(__dirname) + '/about.html')
+    res.sendFile(path.resolve(__dirname) + '/about.html')
 })
 
 app.listen(PORT , ()=>{
